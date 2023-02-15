@@ -34,13 +34,13 @@ export default function Gallery({ setToken }) {
             avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
               R
             </Avatar>}
-            title="NFT Event Name"
-            subheader="September 14, 2016" />
+            title="Chicago"
+            subheader="February 23, 2023" />
           <CardMedia
             component="img"
             height="194"
-            image="/static/images/cards/paella.jpg"
-            alt="NFT name" />
+            image="/src/images/Jordan1.png"
+            alt="Chicago" />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
               This impressive paella is a perfect party dish and a fun meal to cook
