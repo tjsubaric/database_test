@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Gallery.css';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
+import WalletIcon from '@mui/icons-material/Wallet';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
@@ -21,8 +21,9 @@ export default function Gallery({ setToken }) {
   return(
     <><Typography variant="body2" color="text.secondary">
       NFTicket Title and logo
-    </Typography><><Stack direction="row" spacing={2}>
-      <Button variant="outlined" startIcon={<DeleteIcon />}>
+    </Typography><><Stack direction="row" spacing={2} justifyContent="center"
+  alignItems="center">
+      <Button variant="outlined" startIcon={<WalletIcon />} >
         Connect Wallet
       </Button>
       <Button variant="contained" endIcon={<SendIcon />}>
@@ -30,51 +31,26 @@ export default function Gallery({ setToken }) {
       </Button>
     </Stack>
         <Typography variant="body2" color="text.secondary">
-          Some paragraph that describes what our website does
+
+          Some Description of what our website does
+
         </Typography>
         <Stack direction="row" spacing={2}>
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ width: 450, overflow: "auto" }}>
             <CardHeader
               avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
                 R
               </Avatar>}
-              title="Chicago"
+              title="Chicago One"
               subheader="February 23, 2023" />
             <CardMedia
               component="img"
               height="194"
-              image="/src/images/Jordan1.png"
-              alt="Chicago" />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to cook
-                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                if you like.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to cart">
-                <ShoppingCartIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-          <Card sx={{ maxWidth: 345 }}>
-            <CardHeader
-              avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                R
-              </Avatar>}
-              title="NFT Event Name"
-              subheader="September 14, 2016" />
-            <CardMedia
-              component="img"
-              height="194"
               image="/src/images/Chicago.jpg"
-              alt="NFT name" />
+              alt="Chicago One" />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to cook
-                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                if you like.
+              0.25 ETH
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -83,23 +59,21 @@ export default function Gallery({ setToken }) {
               </IconButton>
             </CardActions>
           </Card>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ width: 450, overflow: "auto" }}>
             <CardHeader
               avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
                 R
               </Avatar>}
-              title="NFT Event Name"
+              title="Bright Blue"
               subheader="September 14, 2016" />
             <CardMedia
               component="img"
               height="194"
-              image="/static/images/cards/paella.jpg"
-              alt="NFT name" />
+              image="/src/images/BrightBlue.jpg"
+              alt="Bright Blue" />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to cook
-                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                if you like.
+              0.25 ETH
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -108,23 +82,44 @@ export default function Gallery({ setToken }) {
               </IconButton>
             </CardActions>
           </Card>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ width: 450, overflow: "auto" }}>
             <CardHeader
               avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
                 R
               </Avatar>}
-              title="NFT Event Name"
+              title="Lightning McQueen"
               subheader="September 14, 2016" />
             <CardMedia
               component="img"
               height="194"
-              image="/static/images/cards/paella.jpg"
-              alt="NFT name" />
+              image="/src/images/LightningMcQueen.jpg"
+              alt="lightning mcqueen" />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to cook
-                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                if you like.
+              0.25 ETH
+              </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+              <IconButton aria-label="add to cart">
+                <ShoppingCartIcon />
+              </IconButton>
+            </CardActions>
+          </Card>
+          <Card sx={{ width: 450, overflow: "auto" }}>
+            <CardHeader
+              avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                R
+              </Avatar>}
+              title="Black Menta"
+              subheader="September 14, 2016" />
+            <CardMedia
+              component="img"
+              height="194"
+              image="/src/images/BlackMenta.jpg"
+              alt="Black Menta" />
+            <CardContent>
+              <Typography variant="body2" color="text.secondary">
+              0.25 ETH
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
