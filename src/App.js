@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import Preferences from './components/Preferences';
-import Login from './components/Login'
+import Gallery from './components/Gallery'
 import useToken from './components/useToken';
 
 function setToken(userToken){
@@ -20,7 +18,7 @@ function App() {
   const {token, setToken } = useToken();
 
   if(!token) {
-    return <Login setToken={ setToken } />
+    return <Gallery setToken={ setToken } />
   }
 
   return (
@@ -28,8 +26,7 @@ function App() {
       <h1>Application</h1>
       <BrowserRouter>
         <Routes>
-        <Route path='/dashboard' exact component={Dashboard} />
-        <Route path='/preferences' exact component={Preferences} />
+        <Route path='/' exact component={Gallery} />
         </Routes>
       </BrowserRouter>
     </div>
