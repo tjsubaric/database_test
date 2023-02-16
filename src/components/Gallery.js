@@ -14,9 +14,27 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+//import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function Gallery({ setToken }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return(
     <><Typography variant="body2" color="text.secondary">
@@ -31,9 +49,7 @@ export default function Gallery({ setToken }) {
       </Button>
     </Stack>
         <Typography variant="body2" color="text.secondary">
-
           Some Description of what our website does
-
         </Typography>
         <Stack direction="row" spacing={2}>
           <Card sx={{ width: 450, overflow: "auto" }}>
@@ -49,14 +65,26 @@ export default function Gallery({ setToken }) {
               image="/src/images/Chicago.jpg"
               alt="Chicago One" />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
-              0.25 ETH
-              </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to cart">
-                <ShoppingCartIcon />
+            <IconButton aria-label="view details" onClick={handleOpen}>
+                <VisibilityIcon />
               </IconButton>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    NFT Title
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Some description for the NFT and includes price and add to cart
+                </Typography>
+              </Box>
+            </Modal>
             </CardActions>
           </Card>
           <Card sx={{ width: 450, overflow: "auto" }}>
@@ -72,14 +100,26 @@ export default function Gallery({ setToken }) {
               image="/src/images/BrightBlue.jpg"
               alt="Bright Blue" />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
-              0.25 ETH
-              </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to cart">
-                <ShoppingCartIcon />
+            <IconButton aria-label="view details" onClick={handleOpen}>
+                <VisibilityIcon />
               </IconButton>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    NFT Title
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Some description for the NFT and includes price and add to cart
+                </Typography>
+              </Box>
+            </Modal>
             </CardActions>
           </Card>
           <Card sx={{ width: 450, overflow: "auto" }}>
@@ -95,14 +135,27 @@ export default function Gallery({ setToken }) {
               image="/src/images/LightningMcQueen.jpg"
               alt="lightning mcqueen" />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
-              0.25 ETH
-              </Typography>
+
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to cart">
-                <ShoppingCartIcon />
+            <IconButton aria-label="view details" onClick={handleOpen}>
+                <VisibilityIcon />
               </IconButton>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    NFT Title
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Some description for the NFT and includes price and add to cart
+                </Typography>
+              </Box>
+            </Modal>
             </CardActions>
           </Card>
           <Card sx={{ width: 450, overflow: "auto" }}>
@@ -118,14 +171,27 @@ export default function Gallery({ setToken }) {
               image="/src/images/BlackMenta.jpg"
               alt="Black Menta" />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
-              0.25 ETH
-              </Typography>
+          
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to cart">
-                <ShoppingCartIcon />
+            <IconButton aria-label="view details" onClick={handleOpen}>
+                <VisibilityIcon />
               </IconButton>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    NFT Title
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Some description for the NFT and includes price and add to cart
+                </Typography>
+              </Box>
+            </Modal>
             </CardActions>
           </Card>
         </Stack></></>
